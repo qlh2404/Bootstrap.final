@@ -1,0 +1,1256 @@
+:root {
+    /* Bảng màu chính */
+    --primary-color: #8B4513;     /* Nâu đậm */
+    --secondary-color: #DEB887;   /* Nâu nhạt */
+    --accent-color: #D2691E;      /* Cam đất */
+    --light-color: #FFF8DC;       /* Kem nhạt */
+    --dark-color: #3E2723;        /* Nâu đen */
+    --text-color: #2C1810;        /* Màu chữ chính */
+    --text-light: #6B4423;        /* Màu chữ nhạt */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 56px;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--dark-color) !important;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-color) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.nav-indicator {
+    background-color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    color: var(--light-color);
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: var(--text-light);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Menu Filters */
+.menu-filters .btn {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-color: transparent;
+}
+
+.menu-filters .btn:hover,
+.menu-filters .btn.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Contact Form */
+#contactForm .form-control {
+    border-color: var(--secondary-color);
+}
+
+#contactForm .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+footer a {
+    color: var(--secondary-color) !important;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--light-color) !important;
+}
+
+/* Social Media Icons */
+footer .social-icons a {
+    color: var(--light-color);
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer .social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* Price Tags */
+.card-text strong {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* Section Headings */
+h2 {
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Search Bar */
+.form-control {
+    border-color: var(--secondary-color);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+}
+
+/* Cart Badge */
+.badge {
+    background-color: var(--accent-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: var(--dark-color) !important;
+    }
+    
+    .hero-section {
+        text-align: center;
+    }
+}
+
+/* Hiệu ứng chuyển section */
+.section-transition {
+    animation: slideInUp 0.8s ease-out;
+    opacity: 0;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Chỉ báo section hiện tại trong navbar */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+/* Menu Section Styles */
+#menu {
+    background-color: var(--light-color);
+}
+
+.menu-filters .btn {
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.card-text {
+    color: var(--text-light);
+}
+
+.card-price {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.bestseller-badge {
+    position: absolute;
+    top: 10px;
+    right: -35px;
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Animation cho badge */
+@keyframes pulse {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+.bestseller-badge {
+    animation: pulse 2s infinite;
+}
+
+/* Hiệu ứng hover cho card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Phiên bản thay thế của badge (tùy chọn 2) */
+.bestseller-badge-alt {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(45deg, #ff4d4d, #ff6b6b);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: none;
+    animation: none;
+}
+#about img {
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto; /* Căn giữa ảnh */
+}
+
+/* Xóa background color */
+#about {
+    background-color: transparent; /* Xóa màu nền */
+    padding: 60px 0;
+}
+
+/* Thêm một số hiệu ứng cho ảnh */
+#about .img-fluid {
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Thêm bóng nhẹ */
+}
+
+#about img:hover {
+    transform: scale(1.03); /* Giảm mức độ scale khi hover */
+}
+
+/* Điều chỉnh responsive */
+@media (max-width: 768px) {
+    #about img {
+        max-width: 300px; /* Giảm kích thước ảnh trên mobile */
+        margin-bottom: 30px;
+    }
+}
+
+#about img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+#about h3 {
+    color: #5a3921; /* Màu nâu cà phê đậm */
+    font-weight: bold;
+}
+
+#about h4 {
+    color: #8b5a2b; /* Màu nâu cà phê nhạt hơn */
+}
+
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#about ul li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#about ul li:before {
+    content: "\2615"; /* Unicode cho biểu tượng cốc cà phê */
+    position: absolute;
+    left: 0;
+    color: #8b5a2b;
+}
+/* Animation khi thêm vào giỏ hàng */
+.add-to-cart-animation {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    animation: flyToCart 1s ease-in-out forwards;
+}
+
+@keyframes flyToCart {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.8) translateY(-100px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/* Style cho giỏ hàng */
+.cart-modal .cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-modal .cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-modal .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-modal .cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-modal .cart-item-price {
+    color: #e44d26;
+    font-weight: bold;
+}
+
+.cart-modal .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-modal .quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-modal .quantity-btn:hover {
+    background: #f5f5f5;
+}
+
+.cart-summary {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+/* Thêm vào file styles.css */
+.cart-modal .btn {
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.cart-modal .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.cart-modal .btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.cart-modal .btn-outline-secondary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.cart-modal .btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.cart-modal .card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.cart-modal hr {
+    margin: 1rem 0;
+    border-color: #dee2e6;
+}
+
+.cart-modal .fw-bold {
+    font-size: 1.2rem;
+}
+
+/* Badge animation */
+@keyframes cartBadgePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.badge-animation {
+    animation: cartBadgePulse 0.5s ease-in-out;
+}
+.cart-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1050;
+    max-width: 90%;
+    width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.cart-modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.cart-modal.show,
+.cart-overlay.show {
+    display: block;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+/* Cart Section Styles */
+#cart {
+    background-color: #f8f9fa;
+}
+
+#cart .card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#cart .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#cart .card-img-top {
+    height: 120px;
+    object-fit: cover;
+}
+
+#cart .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#cart .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+#cart .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cart .quantity-controls button:hover {
+    background-color: #f1f1f1;
+}
+
+#cart .quantity-controls span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+#cart .remove-item {
+    color: #dc3545;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cart .remove-item:hover {
+    color: #bd2130;
+}
+
+#cartSummary {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#cartSummary h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#cartSummary .total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#checkoutBtn {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#checkoutBtn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #cart .card-img-top {
+        height: 100px;
+    }
+
+    #cart .card-title {
+        font-size: 1rem;
+    }
+
+    #cart .card-text {
+        font-size: 0.9rem;
+    }
+
+    #cartSummary h4 {
+        font-size: 1.1rem;
+    }
+
+    #cartSummary .total-price {
+        font-size: 1.3rem;
+    }
+
+    #checkoutBtn {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+}
+/* Contact Section Styles */
+#contact {
+    background-color: #f8f9fa;
+}
+
+#contact h2 {
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.contact-info h3, .contact-info h4 {
+    color: var(--primary-color);
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+#contactForm .form-control {
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+    border-radius: 0;
+    padding: 15px 0;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+#contactForm .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#contactForm .btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    #contact .col-md-6:first-child {
+        margin-bottom: 40px;
+    }
+}
+/* Cart Icon Styles */
+#cartIcon {
+    color: var(--light-color) !important; /* Màu trắng */
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#cartIcon:hover {
+    color: var(--secondary-color) !important; /* Màu hover */
+}
+
+#cartIcon .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+}
+
+/* Đảm bảo icon luôn màu trắng */
+#cartIcon i.fas.fa-shopping-cart {
+    color: var(--light-color) !important;
+}
+/* Why Choose Us Section */
+.feature-box {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+.feature-box, .instagram-item img {
+    transition: all 0.3s ease;
+}
+/* Special Offers Section */
+/* Special Offers Section */
+.offer-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Instagram Feed Section */
+.instagram-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.instagram-item img {
+    transition: transform 0.3s ease;
+}
+
+.instagram-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Newsletter Section */
+.newsletter {
+    color: white;
+    border-radius: 10px;
+}
+
+.newsletter-form .form-control {
+    border-radius: 30px 0 0 30px;
+    border: none;
+    padding: 12px 20px;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 30px 30px 0;
+    padding: 12px 30px;
+}
+
+.newsletter h2:after {
+    background-color: white;
+}
+#home {
+    display: block !important;
+}
+
+.why-choose-us,
+.special-offers,
+.instagram-feed,
+.newsletter {
+    display: block !important;
+    visibility: visible !important;
+}
+.special-offers,
+.instagram-feed,
+.newsletter {
+    display: block;
+    visibility: visible;
+}
+
+.offer-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.offer-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(255,255,255,0.9);
+}
+
+.instagram-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-item img {
+    transition: transform 0.3s ease;
+}
+
+.instagram-item:hover img {
+    transform: scale(1.1);
+}
+/* Testimonials Section */
+.testimonials .card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonials .card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonials .blockquote-footer {
+    color: var(--primary-color);
+}
+
+/* Blog Posts Section */
+.blog-posts .card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.blog-posts .card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-posts .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Events Section */
+.events .card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Location Section */
+.location iframe {
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.location ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.location ul li {
+    margin-bottom: 10px;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: linear-gradient(rgba(65, 62, 61, 0.9), rgba(139, 69, 19, 0.9));
+}
+
+.newsletter .form-control {
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+}
+
+.newsletter .btn {
+    border-radius: 0 25px 25px 0;
+    padding: 0 30px;
+}
+
+/* Ensure sections are visible */
+#home {
+    display: block !important;
+}
+
+.testimonials,
+.blog-posts,
+.events,
+.location,
+.newsletter {
+    display: block !important;
+    visibility: visible !important;
+}
+@media (max-width: 768px) {
+    .newsletter .form-control,
+    .newsletter .btn {
+        border-radius: 25px;
+        margin: 5px 0;
+    }
+
+    .location iframe {
+        height: 300px;
+    }
+
+    .blog-posts .card-img-top {
+        height: 150px;
+    }
+}
+/* Style cho tên khách hàng */
+.customer-name {
+    background-color: #FF7F50;  /* Màu nền nâu */
+    color: white; /* Màu chữ trắng */
+    padding: 4px 12px; /* Padding trong */
+    border-radius: 20px; /* Bo tròn góc */
+    font-size: 0.9rem; /* Kích thước chữ */
+    display: inline-block; /* Hiển thị dạng block inline */
+    margin-top: 5px; /* Khoảng cách với phần trên */
+    transition: all 0.3s ease; /* Hiệu ứng hover mượt */
+}
+
+/* Hiệu ứng hover */
+.customer-name:hover {
+    background-color: #CC6640; /* Màu nền tối hơn khi hover */
+    transform: translateY(-2px); /* Nhấc lên một chút khi hover */
+}
+
+/* Style cho card testimonial */
+.testimonials .card {
+    border: none;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonials .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Style cho blockquote footer */
+.testimonials .blockquote-footer {
+    text-align: right; /* Căn phải tên khách hàng */
+    margin-top: 15px; /* Khoảng cách với phần trên */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .customer-name {
+        font-size: 0.8rem; /* Giảm kích thước chữ trên mobile */
+    }
+}
+/* Style cho nút đóng */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hiệu ứng hover cho nút đóng */
+.close-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    transform: rotate(90deg);
+}
+
+/* Focus outline */
+.close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Active state */
+.close-btn:active {
+    transform: scale(0.95) rotate(90deg);
+}
+
+/* Icon trong nút đóng */
+.close-btn i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .close-btn {
+        top: 5px;
+        right: 5px;
+        font-size: 1.2rem;
+    }
+}
+/* Style cho cart overlay */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Style cho cart modal */
+.cart-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1050;
+    max-width: 90%;
+    width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Style cho cart header */
+.cart-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px 0;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    z-index: 1060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Style cho cart content */
+#cartContent {
+    padding-top: 10px;
+}
+
+/* Style cho scrollbar */
+.cart-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cart-modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.cart-modal::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.cart-modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Style cho nút đóng */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1061;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cart-modal {
+        width: 95%;
+        max-height: 85vh;
+        margin-top: 20px;
+    }
+
+    .cart-header {
+        padding: 15px;
+    }
+
+    .cart-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+}
